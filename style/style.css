@@ -1,0 +1,48 @@
+ul {
+  list-style: none;
+}
+
+.link{
+  display: none
+}
+
+.hidden{
+  display: none
+}
+
+
+a:focus {
+  background-color: blue;
+  color: white!important
+}
+
+.sec-left{
+  padding: 10%;
+  
+}
+
+.sec-right{
+  padding: 10%;
+}
+
+.buttons{
+
+  margin-top:15%
+}
+
+.calculatrice {
+  width: 27%!important;
+  padding: 2%!important
+}
+.btn{
+  margin: 4%;
+  padding: 6%;
+}
+select{
+  padding: 11%;
+  margin-right: 4%!important
+}
+input{
+  overflow: hidden!important;
+  margin-left: 1%
+}

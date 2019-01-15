@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <title>Document</title>
+</head>
+
+<body class="container">
+    <header>
+        <h1 class="text-light bg-primary text-center my-5">Javscript DOM</h1>
+        <ul class="d-flex row flex-wrap text-secondary m">
+            <li class="col-3 link1"><a href="#ex-1" onclick="allSection('ex-1')">Exercise 1</a></li>
+            <li class="col-3 link2"><a href="#ex-2" onclick="allSection('ex-2')">Exercise 2</a></li>
+            <li class="col-3 link3"><a href="#ex-3" onclick="allSection('ex-3')">Exercise 3</a></li>
+            <li class="col-3 link4"><a href="#ex-4" onclick="allSection('ex-4')">Exercise 4</a></li>
+            <li class="col-3 link5"><a href="#ex-5" onclick="allSection('ex-5')">Exercise 5</a></li>
+            <li class="col-3 link6"><a href="#ex-6" onclick="allSection('ex-6')">Exercise 6</a></li>
+        </ul>
+    </header>
+    <section class="bg-secondary p-4 mt-5 link" id="ex-1">
+        <h2 class="title">
+            le titre 1
+        </h2>
+        <p>
+            list depriorité et méthode à retrouver dans la documentation
+        </p>
+        <ul>
+            <li>innerText</li>
+            <li>innerHTML</li>
+            <li>querySelector()</li>
+            <li>querySelectorAll()</li>
+            <li>style</li>
+            <li>classList</li>
+        </ul>
+
+        <p>
+            Changer le contenu du h2 par "le titre modifié" <br> changer la couleur du h2 (la couleur que vous voulez) <br>Ajouter une class background bootstrap au h2
+        </p>
+    </section>
+    <section class="bg-secondary p-4 mt-5 link" id="ex-2">
+        <p>
+            Mettre un ecouter d'évenement sur les bouton nav et changer de panel de consequence
+        </p>
+        </section>
+    <section class="bg-secondary p-4 mt-5 link" id="ex-3">
+            <h2 class="title2">
+                    welcome <span class="span">inconnu</span>
+                </h2>
+                <p>
+                    écriver dans l'input ci-dessous le nom de la personne que vous voulez accueillir <br>
+                    lorseque vous cliques sur le bouton "go" le nom que vous avez ajouter dans l'input sera mis dans le span du h2 et l'input sera alors vidé de <br> 
+                    tout contenu. Attention, interdiction de toucher à l'html 
+                </p>
+                <div class="d-flex">
+                    <input type="text" placeholder=" your name">
+                    <button>
+                        go!
+                    </button>
+                </div>
+    </section>
+    <section class="bg-secondary p-4 mt-5 link" id="ex-4">
+        <h2 class="title">
+            Déplacer les éléments
+        </h2>
+        <div class="row d-flex ">
+                <div class="col-5 sec-left bg-primary align-items-center justify-content-center"><div class="bg-danger py-4 roode" ></div></div>
+                <div class="col-2 buttons text-center">
+                  <button class="btn btn-warning change" onclick="changePlace()">
+                    change place
+                  </button>
+                  <button class="btn btn-success cont" onclick="back()">
+                    nombre de click <span class="counter">0</span>
+                  </button>  
+                </div>
+                <div class="col-5 sec-right bg-primary"></div>
+        </div>
+    </section>
+    <section class="bg-secondary p-4 mt-5 link" id="ex-5">
+        <h2 class="title">
+            Générer des éléments du DOM
+        </h2>
+        <p>
+           Cliques sur le bouton ci-dessus pour générer des 
+        </p>
+       <button class="btn btn-success" id="btn-add" onclick="addImage()">
+           Ajouter
+       </button>
+
+       <div class="d-flex flex-wrap" id="container-image">
+           
+           
+       </div>
+    </section>
+    <section class="bg-secondary p-4 mt-5 link" id="ex-6">
+        <h2 class="title">
+            Création calculatrice 
+        </h2>
+        <h3>
+            Niveau 1
+        </h3>
+        <div class="d-flex calcul-simple">
+            <input type="number" id="first-p">
+            <form >                
+                <select class="dropdown">
+                  <option value="0" class="sign">+</option>
+                  <option value="1" class="sign">-</option>
+                  <option value="2" class="sign">*</option>
+                  <option value="3" class="sign">/</option>
+                </select>
+              </form>
+            <input type="number" id="second-p">
+            <button onclick="sumNum()">=</button>
+            <span id="sum" class="bg-success p-2"></span>
+        </div>
+        <h3>
+            Niveau 2
+        </h3>
+        <div class="bg-dark calculatrice">
+            <h3 id="calcul" class="text-light"></h3>
+            <input type="text" class="input-calcul">
+            <div class=" numbers d-flex flex-wrap mt-2">
+                <input type="button" value="1" class="btn btn-light num" onclick="calcul(this)">
+                <input type="button" value="2" class="btn btn-light num" onclick="calcul(this)">
+                <input type="button" value="3" class="btn btn-light num" onclick="calcul(this)">
+                <input type="button" value="+" class="btn btn-primary sign" onclick="signCal(this)">
+                <input type="button" value="4" class="btn btn-light num" onclick="calcul(this)">
+                <input type="button" value="5" class="btn btn-light num" onclick="calcul(this)">
+                <input type="button" value="6" class="btn btn-light num" onclick="calcul(this)">
+                <input type="button" value="-" class="btn btn-primary sign" onclick="signCal(this)">
+                <input type="button" value="7" class="btn btn-light num" onclick="calcul(this)">
+                <input type="button" value="8" class="btn btn-light num" onclick="calcul(this)">
+                <input type="button" value="9" class="btn btn-light num" onclick="calcul(this)">
+                <input type="button" value="*" class="btn btn-primary sign" onclick="signCal(this)">
+                <input type="button" value="C" class="btn btn-danger cancel" onclick="eraseNum()">
+                <input type="button" value="0" class="btn btn-light num" onclick="calcul(this)">
+                <input type="button" value="=" class="btn btn-success sum" onclick="sumCal()">
+                <input type="button" value="/" class="btn btn-primary sign" onclick="signCal(this)">
+            </div>
+
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
